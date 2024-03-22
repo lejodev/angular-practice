@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
-import { CarsComponent } from './components/cars/cars.component';
+import { CarsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [

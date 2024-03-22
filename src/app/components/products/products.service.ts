@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http"
-import { Car } from "src/app/models/car.model";
+import { Product } from "src/app/models/product.model";
 import { Observable } from "rxjs";
 
 
@@ -10,17 +10,17 @@ import { Observable } from "rxjs";
 
 export class CarsService {
 
-    private api = "https://api.api-ninjas.com/v1/cars?limit=2&model=camaro";
+    private api = "https://fakestoreapi.com/products";
 
     constructor(private http: HttpClient) { }
 
-    getCars(): Observable<Car[]> {
+    getCars(): Observable<Product[]> {
 
         const headers = new HttpHeaders({
             "X-Api-Key": "ojOKEOAWiCbl34KLOVvF1q4CaZ8AP7XzrocEyrPj"
         })
 
-        return this.http.get<Car[]>(this.api, { headers })
+        return this.http.get<Product[]>(this.api)
     }
 
 
