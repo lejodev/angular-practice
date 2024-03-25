@@ -23,5 +23,9 @@ export class CarsService {
         return this.http.get<Product[]>(this.api)
     }
 
+    // getHighestRated():Observable<Product>{
+    //     this.getCars.
+    // }
+
 
 }

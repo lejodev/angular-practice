@@ -11,9 +11,17 @@ export class CarsComponent implements OnInit {
 
   constructor(private carsService: CarsService) { }
   products!: Product[]
+  highestRated!: Product
 
   ngOnInit(): void {
-    this.carsService.getCars().subscribe(data => { console.log(data); this.products = data })
+    this.carsService.getCars().subscribe(data => {
+      this.products = data
+      console.log(this.products)
+      this.highestRated = this.products.reduce((prevProduct: Product, currentProduct: Product) => {
+        return prevProduct.rating.rate > currentProduct.rating.rate ? prevProduct : currentProduct
+      })
+      console.log("Highest rated produt", this.highestRated)
+    })
   }
 
   handleClick(buttonValue: string) {
