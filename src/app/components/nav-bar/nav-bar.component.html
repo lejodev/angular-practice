@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
-    <a href="/" class="navbar-brand" style="color: white">STORE</a>
+    <a routerLink="/" class="navbar-brand" style="color: white">STORE</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -17,7 +17,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a
-            href="#"
+            routerLink="#"
             class="nav-link dropdown-toggle"
             id="navbarDropdown"
             role="button"
@@ -27,17 +27,19 @@
             >Categories</a
           >
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Clothing</a></li>
-            <li><a class="dropdown-item" href="#">Jewelry</a></li>
-            <li><a class="dropdown-item" href="#">Sport</a></li>
-            <li><a class="dropdown-item" href="#">Tech</a></li>
+            <li><a class="dropdown-item" routerLink="#">Clothing</a></li>
+            <li><a class="dropdown-item" routerLink="#">Jewelry</a></li>
+            <li><a class="dropdown-item" routerLink="#">Sport</a></li>
+            <li><a class="dropdown-item" routerLink="#">Tech</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" style="color: white">Clothing</a>
+          <a routerLink="/clothing" class="nav-link" style="color: white"
+            >Clothing</a
+          >
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" style="color: white">Tech</a>
+          <a routerLink="/tech" class="nav-link" style="color: white">Tech</a>
         </li>
       </ul>
       <form action="" class="d-flex">

@@ -8,19 +8,20 @@ import { Observable } from "rxjs";
     providedIn: "root"
 })
 
-export class CarsService {
+export class ProductsService {
 
     private api = "https://fakestoreapi.com/products";
 
     constructor(private http: HttpClient) { }
 
-    getCars(): Observable<Product[]> {
-
-        const headers = new HttpHeaders({
-            "X-Api-Key": "ojOKEOAWiCbl34KLOVvF1q4CaZ8AP7XzrocEyrPj"
-        })
+    getAllProducts(): Observable<Product[]> {
 
         return this.http.get<Product[]>(this.api)
+    }
+
+    getProductsByCategory(query: string): Observable<Product[]> {
+
+        return this.http.get<Product[]>(`${this.api}/category/${query}`)
     }
 
     // getHighestRated():Observable<Product>{
