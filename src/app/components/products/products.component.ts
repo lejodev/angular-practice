@@ -25,17 +25,17 @@ export class ProductsComponent {
     }
   }
 
-  // ngOnInit(): void {
-  //   // this.productsService.getCars().subscribe(data => {
-  //   //   this.products = data
-  //   //   console.log(this.products)
-  //   //   this.highestRated = this.products.reduce((prevProduct: Product, currentProduct: Product) => {
-  //   //     return prevProduct.rating.rate > currentProduct.rating.rate ? prevProduct : currentProduct
-  //   //   })
-  //   //   console.log("Highest rated produt", this.highestRated)
-  //   // })
-  //   console.log("DATA INCOMING>>>>>>>>>>>>>>>>>:", this.productsBind)
-  // }
+  ngOnInit(): void {
+    // this.productsService.getCars().subscribe(data => {
+    //   this.products = data
+    //   console.log(this.products)
+    //   this.highestRated = this.products.reduce((prevProduct: Product, currentProduct: Product) => {
+    //     return prevProduct.rating.rate > currentProduct.rating.rate ? prevProduct : currentProduct
+    //   })
+    //   console.log("Highest rated produt", this.highestRated)
+    // })
+    console.log("DATA INCOMING>>>>>>>>>>>>>>>>>:", this.productsBind)
+  }
 
 
 

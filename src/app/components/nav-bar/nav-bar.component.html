@@ -27,10 +27,16 @@
             >Categories</a
           >
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="#">Clothing</a></li>
-            <li><a class="dropdown-item" routerLink="#">Jewelry</a></li>
-            <li><a class="dropdown-item" routerLink="#">Sport</a></li>
-            <li><a class="dropdown-item" routerLink="#">Tech</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/clothing">Men's clothing</a>
+            </li>
+            <!-- <li>
+              <a class="dropdown-item" routerLink="/womens_clothing"
+                >Women's clothing</a
+              >
+            </li> -->
+            <!-- <li><a class="dropdown-item" routerLink="/sport">Sport</a></li> -->
+            <li><a class="dropdown-item" routerLink="/tech">Tech</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -42,8 +48,23 @@
           <a routerLink="/tech" class="nav-link" style="color: white">Tech</a>
         </li>
       </ul>
-      <form action="" class="d-flex">
-        <input type="search" class="form-control me-2" placeholder="search" />
+      <form [formGroup]="searchGroup" (submit)="inputSearch()" class="d-flex">
+        <input
+          type="search"
+          class="form-control me-2"
+          placeholder="search"
+          [formGroup]="searchGroup"
+          id="search"
+          formControlName="search"
+        />
+        <!-- <ul class="position-absolute bg-light zi">
+          <li>df</li>
+          <li>fffghh</li>
+          <li>ll</li>
+          <li>df</li>
+          <li>fffghh</li>
+          <li>ll</li>
+        </ul> -->
         <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
     </div>
