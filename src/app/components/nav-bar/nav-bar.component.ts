@@ -25,16 +25,14 @@ export class NavBarComponent implements OnInit {
   }
 
   inputSearch() {
-    // console.log("values sent")
-    // console.log(this.searchGroup.value.search)
     const title = this.searchGroup.value.search ?? "" // This syntax ?? "" means if null or undefined, use the right hand value, on this case an empty string
-    this.productsService.getProductByTitle(title).subscribe(data => {
-      if (data.length > 0) {
-        this.router.navigate([`/${title}`])
-      } else {
-
-      }
-    })
+    // this.productsService.getProductByTitle(title).subscribe(data => {
+    if (title != undefined) {
+      this.router.navigate([`${title}`])
+    } else {
+      this.router.navigate(["**"])
+    }
+    // })
   }
 
 }

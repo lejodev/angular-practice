@@ -15,7 +15,6 @@ export class ClothingComponent implements OnInit {
   ngOnInit(): void {
     this.productsService.getProductsByCategory("men's clothing").subscribe(data => {
       this.productsList = data
-
     })
   }
 

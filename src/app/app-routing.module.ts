@@ -8,6 +8,7 @@ import { JewelryComponent } from './components/jewelry/jewelry.component';
 import { MensClothingComponent } from './components/mens-clothing/mens-clothing.component';
 import { WomensClothingComponent } from './components/womens-clothing/womens-clothing.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: 'clothing', component: ClothingComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: "mens_clothing", component: MensClothingComponent },
   { path: "womens_clothing", component: WomensClothingComponent },
   { path: "", component: AllComponent },
-  { path: ":searchInput", component: SearchResultsComponent }
+  { path: ":searchInput", component: SearchResultsComponent },
+  { path: "**", component: PageNotFoundComponent }
   // Other routes if any
 ];
 

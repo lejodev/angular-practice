@@ -18,7 +18,7 @@ export class ProductsComponent {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['productsBind']) {
-      console.log("DATA INCOMING:", this.productsBind);
+      // console.log("DATA INCOMING:", this.productsBind);
       this.products = this.productsBind
     } else {
       console.log("BAD")
@@ -34,7 +34,6 @@ export class ProductsComponent {
     //   })
     //   console.log("Highest rated produt", this.highestRated)
     // })
-    console.log("DATA INCOMING>>>>>>>>>>>>>>>>>:", this.productsBind)
   }
 
 
