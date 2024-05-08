@@ -10,13 +10,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+
   private routeSub: any;
-
-  constructor(private route: ActivatedRoute, private router: Router, private productsService: ProductsService) { }
-
   endPointProduct: any = null
   productsList: Product[] = []
 
+  constructor(private route: ActivatedRoute, private router: Router, private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {

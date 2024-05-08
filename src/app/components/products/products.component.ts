@@ -21,19 +21,12 @@ export class ProductsComponent {
       // console.log("DATA INCOMING:", this.productsBind);
       this.products = this.productsBind
     } else {
+      this.productsService.getAllProducts().subscribe(data => { this.products = data })
       console.log("BAD")
     }
   }
 
   ngOnInit(): void {
-    // this.productsService.getCars().subscribe(data => {
-    //   this.products = data
-    //   console.log(this.products)
-    //   this.highestRated = this.products.reduce((prevProduct: Product, currentProduct: Product) => {
-    //     return prevProduct.rating.rate > currentProduct.rating.rate ? prevProduct : currentProduct
-    //   })
-    //   console.log("Highest rated produt", this.highestRated)
-    // })
   }
 
 

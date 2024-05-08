@@ -32,6 +32,10 @@ export class ProductsService {
 
     }
 
+    getProductById(id: number): Observable<Product> {
+        return this.http.get<Product>(`${this.api}/${id}`)
+    }
+
     // getHighestRated():Observable<Product>{
     //     this.getCars.
     // }

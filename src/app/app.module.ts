@@ -15,6 +15,7 @@ import { WomensClothingComponent } from './components/womens-clothing/womens-clo
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     WomensClothingComponent,
     FooterComponent,
     SearchResultsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

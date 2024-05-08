@@ -20,18 +20,20 @@
   <div class="main-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <div class="col" *ngFor="let product of products">
       <div class="card h-100 d-flex flex-column">
-        <img
-          class="card-img-top"
-          src="{{ product.image }}"
-          alt="{{ product.title }}"
-          srcset=""
-          style="height: 60vh"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.title }}</h5>
-          <p class="card-text">{{ product.description }}</p>
-          <p class="card-text">$ {{ product.price }}</p>
-        </div>
+        <a [routerLink]="['/product', product.id]">
+          <img
+            class="card-img-top"
+            src="{{ product.image }}"
+            alt="{{ product.title }}"
+            srcset=""
+            style="height: 60vh"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text">$ {{ product.price }}</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
